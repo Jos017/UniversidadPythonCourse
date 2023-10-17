@@ -1,20 +1,22 @@
+# pylint: disable=invalid-name
+
 # Define variables
 # No need data type
-myVariable = 'Hello from Python'
+my_variable = 'Hello from Python'
 print('-----Variables intro-----')
-print(myVariable)
-print(myVariable)
+print(my_variable)
+print(my_variable)
 
 # Change its value
 print('-----Changing value-----')
 
-myVariable = 10
-print(myVariable)
-print(myVariable)
+my_variable = 10
+print(my_variable)
+print(my_variable)
 
-myVariable = True
-print(myVariable)
-print(myVariable)
+my_Variable = 9
+print(my_variable)
+print(my_variable)
 
 # Use variables to declare a new variable
 x = 10
