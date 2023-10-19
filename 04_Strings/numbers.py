@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # If we use numbers in a string we concatenate it,
 number_1 = '1'
 number_2 = '2'

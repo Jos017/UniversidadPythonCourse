@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # Define variables
 # No need data type
 my_variable = 'Hello from Python'

@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # Declare 3 variables, name, phone, and email
 name = 'user01'
 phone = 123123123

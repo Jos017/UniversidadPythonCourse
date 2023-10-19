@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # Use type(data) to obtain the data type
 
 # Numeric data is divided into three types

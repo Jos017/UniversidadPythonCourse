@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # Binary data is divided into three types
 
 # 1. bytes (bytes)

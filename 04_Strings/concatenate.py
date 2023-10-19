@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 # A string can be concatenated
 
 # Using (+) to concatenate
