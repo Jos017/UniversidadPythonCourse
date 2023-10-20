@@ -1,6 +1,7 @@
 # A Tuple is defined by parenthesis ()
 # A Tuple works the same way as a List
 # The difference is that a Tuple is not mutable
+# You cannot change any value, add items, or remove items
 
 ########
 # If a tuple only has one element you should use a comma after this element
