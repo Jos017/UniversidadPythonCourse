@@ -39,3 +39,7 @@ class Person:
 
     def show_details(self):
         print(f'Person: {self._name} {self._last_name} {self._age}')
+
+    # # We can define a destructor method
+    # def __del__(self):
+    #     print(f'Persona: {self._name} {self._last_name}')
