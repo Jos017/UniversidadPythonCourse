@@ -12,3 +12,9 @@ print(my_class.var_class)
 print(my_class_2.var_class)
 print(my_class.var_instance)
 print(my_class_2.var_instance)
+
+# We can add class variable on the fly to a variable
+My_class.var_class_2 = 'This is an on fly variable'
+print(My_class.var_class_2)
+print(my_class.var_class_2)
+print(my_class_2.var_class_2)
