@@ -1,0 +1,3 @@
+Adding information to our file
+uft8 allows accents (á)
+The end
