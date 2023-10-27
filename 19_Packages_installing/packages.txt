@@ -1,0 +1,12 @@
+In python we can install packages for helping us
+To install a package, the first you need is a virtual environment, in this case venv
+
+1. Create a venv from console (bash)
+  $ py -m venv /path/to/new/virtual/environment
+
+2. Activate the virtual environment
+  $ source venv/bin/activate  (bash/zsh)
+  $ venv/Scripts/activate.bat (cmd)
+
+3. Install a package
+  $ pip install <package_name>
