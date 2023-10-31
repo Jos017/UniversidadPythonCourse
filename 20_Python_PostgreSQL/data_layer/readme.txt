@@ -1,0 +1,2 @@
+- All the data layer lab uses a database with name test_db
+- To the connection pool you should install the package psycopg[pool]
