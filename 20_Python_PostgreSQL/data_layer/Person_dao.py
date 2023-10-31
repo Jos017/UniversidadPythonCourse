@@ -3,7 +3,7 @@ DAO (Data Access Object)
 CRUD (Create Read Update Delete)
 '''
 from logger_base import log
-from Connection import Connection
+from Connection_pool import Connection
 from Person import Person
 
 
@@ -15,20 +15,27 @@ class Person_dao:
 
     @classmethod
     def select(cls):
-        with Connection.get_connection():
-            with Connection.get_cursor() as cursor:
+        # with Connection.get_pool():
+        with Connection.get_connection() as conn:
+            with conn.cursor() as cursor:
                 cursor.execute(cls._SELECT)
                 records = cursor.fetchall()
                 persons = []
                 for record in records:
-                    person = Person(record[0], record[1], record[2], record[3])
+                    person = Person(
+                        record[0],
+                        record[1],
+                        record[2],
+                        record[3]
+                    )
                     persons.append(person)
                 return persons
 
     @classmethod
     def insert(cls, person: Person):
-        with Connection.get_connection():
-            with Connection.get_cursor() as cursor:
+        # with Connection.get_pool():
+        with Connection.get_connection() as conn:
+            with conn.cursor() as cursor:
                 values = (person.name, person.last_name, person.email)
                 cursor.execute(cls._INSERT, values)
                 log.debug(f'Inserted person: {person}')
@@ -36,8 +43,9 @@ class Person_dao:
 
     @classmethod
     def update(cls, person: Person):
-        with Connection.get_connection():
-            with Connection.get_cursor() as cursor:
+        # with Connection.get_pool():
+        with Connection.get_connection() as conn:
+            with conn.cursor() as cursor:
                 values = (
                     person.name,
                     person.last_name,
@@ -50,8 +58,9 @@ class Person_dao:
 
     @classmethod
     def delete(cls, person: Person):
-        with Connection.get_connection():
-            with Connection.get_cursor() as cursor:
+        # with Connection.get_pool():
+        with Connection.get_connection() as conn:
+            with conn.cursor() as cursor:
                 values = (person.person_id,)
                 cursor.execute(cls._DELETE, values)
                 log.debug(f'Deleted person: {person}')
